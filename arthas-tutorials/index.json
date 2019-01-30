@@ -1,14 +1,14 @@
 {
-  "title": "Arthas Basics",
-  "description": "Arthas Basics",
+  "title": "Arthas 指南",
+  "description": "Arthas 指南",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "快速开始",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Dashboard",
         "text": "step2.md"
       },
       {
@@ -24,6 +24,16 @@
     }
   },
   "environment": {
+    "terminals": [
+      {
+        "name": "Terminal 2",
+        "target": "host01"
+      },
+      {
+        "name": "Docker Stats",
+        "target": "host01"
+      }
+    ],
     "uilayout": "terminal"
   },
   "backend": {

@@ -26,14 +26,11 @@
   "environment": {
     "terminals": [
       {
-        "name": "arthas-demo",
-        "target": "host01"
-      },
-      {
         "name": "arthas-boot",
         "target": "host01"
       }
-    ]
+    ],
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "java"

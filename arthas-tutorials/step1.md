@@ -5,7 +5,7 @@
 
 
 `wget https://alibaba.github.io/arthas/arthas-demo.jar
-java -jar arthas-demo.jar`{{execute T1}
+java -jar arthas-demo.jar`{{execute T1}}
 
 
 ### 启动arthas-boot

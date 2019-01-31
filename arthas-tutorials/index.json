@@ -12,8 +12,20 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Thread",
         "text": "step3.md"
+      },
+      {
+        "title": "Jad",
+        "text": "step4.md"
+      },
+      {
+        "title": "Watch",
+        "text": "step5.md"
+      },
+      {
+        "title": "Exit/Shutdown",
+        "text": "step6.md"
       }
     ],
     "intro": {

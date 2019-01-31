@@ -8,12 +8,20 @@
         "text": "arthas-demo.md"
       },
       {
+        "title": "启动arthas-boot",
+        "text": "arthas-boot.md"
+      },
+      {
         "title": "Dashboard",
         "text": "dashboard.md"
       },
       {
         "title": "Thread",
         "text": "thread.md"
+      },
+      {
+        "title": "Sc",
+        "text": "sc.md"
       },
       {
         "title": "Jad",

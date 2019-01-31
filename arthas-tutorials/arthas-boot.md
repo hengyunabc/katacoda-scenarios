@@ -16,3 +16,12 @@ Attach成功之后，会打印Arthas LOGO，输入 `help`{{execute T2}} 可以�
 ![Arthas Boot](/katacoda-scenarios/scenarios/arthas-tutorials/assets/arthas-boot.png)
 
 ![Arthas Boot](/hengyunabc/scenarios/arthas-tutorials/assets/arthas-boot.png)
+
+
+<img src="/kubeflow/scenarios/deploying-kubeflow/assets/jupyterhub-create-notebook.png" alt="Create New Jupyter Notebook">
+
+
+<img src="/katacoda-scenarios/scenarios/arthas-tutorials/assets/arthas-boot.png" alt="Create New Jupyter Notebook">
+
+
+<img src="/hengyunabc/scenarios/arthas-tutorials/assets/arthas-boot.png" alt="Create New Jupyter Notebook">

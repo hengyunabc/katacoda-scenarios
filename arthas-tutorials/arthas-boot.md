@@ -24,4 +24,6 @@ Attach成功之后，会打印Arthas LOGO，输入 `help`{{execute T2}} 可以�
 <img src="/katacoda-scenarios/scenarios/arthas-tutorials/assets/arthas-boot.png" alt="Create New Jupyter Notebook">
 
 
+<img src="hengyunabc/scenarios/arthas-tutorials/assets/arthas-boot.png" alt="Create New Jupyter Notebook">
+
 <img src="/hengyunabc/scenarios/arthas-tutorials/assets/arthas-boot.png" alt="Create New Jupyter Notebook">

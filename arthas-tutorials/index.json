@@ -41,6 +41,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "arthas-boot.png",
+          "target": "/tmp/arthas-boot.png"
+        }
+      ]
     }
   },
   "environment": {

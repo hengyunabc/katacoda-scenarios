@@ -44,12 +44,6 @@
     }
   },
   "environment": {
-    "terminals": [
-      {
-        "name": "arthas-boot",
-        "target": "host01"
-      }
-    ],
     "uilayout": "terminal"
   },
   "backend": {

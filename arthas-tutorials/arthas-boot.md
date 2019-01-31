@@ -11,11 +11,10 @@ java -jar arthas-boot.jar`{{execute T2}}
 
 选择第一个进程，输入 `1`{{execute T2}} ，再`Enter/回车`：
 
-Attach成功之后，会打印Arthas LOGO，输入 `help`{{execute T2}} 可以获取到更多的帮助信息。
+Attach成功之后，会打印Arthas LOGO。输入 `help`{{execute T2}} 可以获取到更多的帮助信息。
 
-![Arthas Boot](/katacoda-scenarios/scenarios/arthas-tutorials/assets/arthas-boot.png)
+![Katacoda Logo](/scenario-examples/scenarios/displaying-images/assets/logo-text-with-head.png)
 
-![Arthas Boot](/hengyunabc/scenarios/arthas-tutorials/assets/arthas-boot.png)
-
+![Arthas Boot](/hengyunabc/scenarios/arthas-tutorials/assets/logo-text-with-head.png)
 
 <img src="https://alibaba.github.io/arthas/arthas-boot-katacoda.png" alt="Arthas Boot">

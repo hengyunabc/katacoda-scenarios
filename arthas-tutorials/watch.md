@@ -6,3 +6,6 @@
 `按 Ctrl+C 退出watch命令。`{{execute interrupt}} 。
 
 按 `Ctrl+C`{{execute interrupt}} 退出watch命令。
+
+
+Use `clear`{{execute interrupt}} and Ctrl+C to exit htop.

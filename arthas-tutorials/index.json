@@ -4,28 +4,28 @@
   "details": {
     "steps": [
       {
-        "title": "快速开始",
-        "text": "step1.md"
+        "title": "启动arthas-demo",
+        "text": "arthas-demo.md"
       },
       {
         "title": "Dashboard",
-        "text": "step2.md"
+        "text": "dashboard.md"
       },
       {
         "title": "Thread",
-        "text": "step3.md"
+        "text": "thread.md"
       },
       {
         "title": "Jad",
-        "text": "step4.md"
+        "text": "jad.md"
       },
       {
         "title": "Watch",
-        "text": "step5.md"
+        "text": "watch.md"
       },
       {
         "title": "Exit/Shutdown",
-        "text": "step6.md"
+        "text": "exit.md"
       }
     ],
     "intro": {

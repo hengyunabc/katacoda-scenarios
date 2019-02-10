@@ -1,4 +1,6 @@
 
-通过“快速入门”，基本掌握了Arthas的用法，更多高级特性，可以在下面的指南里继续了解。
+Through this tutorial, you can know how to use Arthas. More advanced features can be found in the Advanced Guide below.
 
-* 文档： https://alibaba.github.io/arthas
+* [Arthas Advanced](https://alibaba.github.io/arthas/arthas-tutorials?language=en&id=arthas-advanced)
+* [Arthas Github](https://github.com/alibaba/arthas)
+* [Arthas Documentation](https://alibaba.github.io/arthas/en)

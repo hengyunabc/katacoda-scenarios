@@ -1,4 +1,4 @@
 
-可以通过 `jad` 命令来反编绎代码：
+The `jad` command can be used to ecompile the code:
 
 `jad demo.MathGame`{{execute T2}}

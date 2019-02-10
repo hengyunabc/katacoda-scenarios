@@ -1,4 +1,4 @@
 
-可以通过 `sc` 命令来查找JVM里已加载的类：
+The `sc` command can be used to find the loaded classes in the JVM:
 
 `sc -d *MathGame`{{execute T2}}

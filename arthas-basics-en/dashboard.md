@@ -1,3 +1,3 @@
-`dashboard`{{execute T2}} 命令可以查看当前系统的实时数据面板。
+The `dashboard`{{execute T2}} command allows you to view the real-time data panel of the current system.
 
-按 `Ctrl+C` 可以退出dashboard命令。
+Enter `Q`{{execute T2}} or `Ctrl+C` to exit the dashboard command.

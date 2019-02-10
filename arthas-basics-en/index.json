@@ -1,14 +1,14 @@
 {
-  "title": "Arthas 指南",
-  "description": "Arthas 指南",
+  "title": "Arthas Basics",
+  "description": "Arthas Basics",
   "details": {
     "steps": [
       {
-        "title": "启动arthas-demo",
+        "title": "Start arthas-demo",
         "text": "arthas-demo.md"
       },
       {
-        "title": "启动arthas-boot",
+        "title": "Start arthas-boot",
         "text": "arthas-boot.md"
       },
       {
@@ -52,14 +52,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Web Console",
-        "port": 8563
-      }
-    ]
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "java"

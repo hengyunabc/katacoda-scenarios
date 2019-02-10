@@ -1,9 +1,8 @@
-`thread 1`{{execute interrupt}} 命令会打印线程ID 1的栈。
+The `thread 1`{{execute interrupt}} command prints the stack of thread ID 1.
 
+Arthas supports pipes, and you can find `main class` with `thread 1 | grep 'main('`{{execute T2}}.
 
-Arthas支持管道，可以用 `thread 1 | grep 'main('`{{execute T2}} 查找到`main class`。
-
-可以看到`main class`是`demo.MathGame`：
+You can see that `main class` is `demo.MathGame`:
 
 ```
 $ thread 1 | grep 'main('

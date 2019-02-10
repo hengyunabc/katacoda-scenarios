@@ -3,4 +3,4 @@
 
 `watch demo.MathGame primeFactors returnObj`{{execute T2}}
 
-按 `Ctrl+C` 退出watch命令。
+输入 `Q`{{execute T2}} 或者 `Ctrl+C` 退出watch命令。

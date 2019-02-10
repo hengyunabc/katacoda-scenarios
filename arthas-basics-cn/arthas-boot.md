@@ -2,7 +2,7 @@
 
 
 
-在新的`Terminal`里，下载`arthas-boot.jar`，再用`java -jar`命令启动：
+在新的`Terminal 2`里，下载`arthas-boot.jar`，再用`java -jar`命令启动：
 
 `wget https://alibaba.github.io/arthas/arthas-boot.jar
 java -jar arthas-boot.jar --target-ip 0.0.0.0`{{execute T2}}

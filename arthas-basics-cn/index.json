@@ -52,14 +52,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Web Console",
-        "port": 8563
-      }
-    ]
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "java"

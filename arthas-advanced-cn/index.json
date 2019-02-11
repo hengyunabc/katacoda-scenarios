@@ -47,11 +47,11 @@
       "host01": [
         {
           "file": "arthas-boot.png",
-          "target": "/tmp/arthas-boot.png"
+          "target": "/tmp/"
         },
         {
           "file": "demo-arthas-spring-boot.jar",
-          "target": "/tmp/demo-arthas-spring-boot.jar"
+          "target": "/tmp/"
         }
       ]
     }

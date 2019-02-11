@@ -37,7 +37,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "java -jar /tmp/demo-arthas-spring-boot.jar"
     },
     "finish": {
       "text": "finish.md"
@@ -47,6 +48,10 @@
         {
           "file": "arthas-boot.png",
           "target": "/tmp/arthas-boot.png"
+        },
+        {
+          "file": "demo-arthas-spring-boot.jar",
+          "target": "/tmp/demo-arthas-spring-boot.jar"
         }
       ]
     }
@@ -56,8 +61,8 @@
     "showdashboard": true,
     "dashboards": [
       {
-        "name": "Web Console",
-        "port": 8563
+        "name": "Web",
+        "port": 8080
       }
     ]
   },

@@ -4,16 +4,16 @@
   "details": {
     "steps": [
       {
-        "title": "启动arthas-demo",
-        "text": "arthas-demo.md"
+        "title": "启动demo",
+        "text": "start-demo.md"
       },
       {
         "title": "启动arthas-boot",
         "text": "arthas-boot.md"
       },
       {
-        "title": "Dashboard",
-        "text": "dashboard.md"
+        "title": "查看JVM信息",
+        "text": "jvm-info.md"
       },
       {
         "title": "Thread",
@@ -37,8 +37,7 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
-      "code": "start-demo.sh"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"

@@ -16,12 +16,16 @@
         "text": "jvm-info.md"
       },
       {
-        "title": "Thread",
-        "text": "thread.md"
+        "title": "Tips",
+        "text": "tips.md"
       },
       {
-        "title": "Sc",
-        "text": "sc.md"
+        "title": "sc/sm 查看已加载的类",
+        "text": "sc-sm.md"
+      },
+      {
+        "title": "Thread",
+        "text": "thread.md"
       },
       {
         "title": "Jad",

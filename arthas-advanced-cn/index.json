@@ -24,16 +24,24 @@
         "text": "sc-sm.md"
       },
       {
-        "title": "Thread",
-        "text": "thread.md"
-      },
-      {
         "title": "Jad",
         "text": "jad.md"
       },
       {
+        "title": "热更新代码",
+        "text": "jad-mc-redefine.md"
+      },
+      {
+        "title": "Ognl",
+        "text": "ognl.md"
+      },
+      {
         "title": "Watch",
         "text": "watch.md"
+      },
+      {
+        "title": "Thread",
+        "text": "thread.md"
       },
       {
         "title": "Web Console",

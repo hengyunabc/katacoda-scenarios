@@ -12,7 +12,7 @@ Something went wrong: 500 Internal Server Error
 
 `jad --source-only com.example.demo.arthas.user.UserController > /tmp/UserController.java`{{execute T2}}
 
-jad反编绎的结果保存在 `/tmp/UserController.java`文件里了。
+jad反编译的结果保存在 `/tmp/UserController.java`文件里了。
 
 再打开一个`Terminal 3`，然后用vim来编辑`/tmp/UserController.java`：
 
@@ -36,11 +36,11 @@ jad反编绎的结果保存在 `/tmp/UserController.java`文件里了。
 
 ### mc
 
-保存好`/tmp/UserController.java`之后，使用`mc`(Memory Compiler)命令来编绎：
+保存好`/tmp/UserController.java`之后，使用`mc`(Memory Compiler)命令来编译：
 
 `mc /tmp/UserController.java -d /tmp`{{execute T2}}
 
-```
+```bash
 $ mc /tmp/UserController.java -d /tmp
 Memory compiler output:
 /tmp/com/example/demo/arthas/user/UserController.class
@@ -49,7 +49,7 @@ Affect(row-cnt:1) cost in 346 ms
 
 ### redefine
 
-再使用`redefine`命令重新加载新编绎好的`UserController.class`：
+再使用`redefine`命令重新加载新编译好的`UserController.class`：
 
 `redefine /tmp/com/example/demo/arthas/user/UserController.class`{{execute T2}}
 

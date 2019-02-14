@@ -1,35 +1,51 @@
 {
-  "title": "Arthas 指南",
-  "description": "Arthas 指南",
+  "title": "Arthas 进阶",
+  "description": "Arthas 进阶",
   "details": {
     "steps": [
       {
-        "title": "启动arthas-demo",
-        "text": "arthas-demo.md"
+        "title": "启动demo",
+        "text": "start-demo.md"
       },
       {
         "title": "启动arthas-boot",
         "text": "arthas-boot.md"
       },
       {
-        "title": "Dashboard",
-        "text": "dashboard.md"
+        "title": "查看JVM信息",
+        "text": "jvm-info.md"
       },
       {
-        "title": "Thread",
-        "text": "thread.md"
+        "title": "Tips",
+        "text": "tips.md"
       },
       {
-        "title": "Sc",
-        "text": "sc.md"
+        "title": "sc/sm 查看已加载的类",
+        "text": "sc-sm.md"
       },
       {
         "title": "Jad",
         "text": "jad.md"
       },
       {
+        "title": "热更新代码",
+        "text": "jad-mc-redefine.md"
+      },
+      {
+        "title": "Ognl",
+        "text": "ognl.md"
+      },
+      {
         "title": "Watch",
         "text": "watch.md"
+      },
+      {
+        "title": "Thread",
+        "text": "thread.md"
+      },
+      {
+        "title": "Web Console",
+        "text": "web-console.md"
       },
       {
         "title": "Exit/Shutdown",
@@ -56,8 +72,8 @@
     "showdashboard": true,
     "dashboards": [
       {
-        "name": "Web Console",
-        "port": 8563
+        "name": "Web Port 80",
+        "port": 80
       }
     ]
   },

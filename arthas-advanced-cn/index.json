@@ -28,12 +28,16 @@
         "text": "jad.md"
       },
       {
-        "title": "热更新代码",
-        "text": "jad-mc-redefine.md"
+        "title": "案例: 热更新代码",
+        "text": "case-jad-mc-redefine.md"
       },
       {
         "title": "Ognl",
         "text": "ognl.md"
+      },
+      {
+        "title": "案例: 动态更新应用Logger Level",
+        "text": "case-ognl-update-logger-level.md"
       },
       {
         "title": "Watch",

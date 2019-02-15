@@ -30,12 +30,6 @@ $ ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("j
 ]
 ```
 
-### 获取logback的配置文件：
-
-结合应用代码，通过`ognl`表达式，可以获取到很多有用的信息，比如获取logback的配置文件：
-
-`ognl '#map1=@org.slf4j.LoggerFactory@getLogger("root").loggerContext.objectMap, #map1.get("CONFIGURATION_WATCH_LIST")'`{{execute T2}}
-
 ### 更多
 
 在Arthas里`ognl`表达式是很重要的功能，在很多命令里都可以使用`ognl`表达式。

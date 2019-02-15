@@ -36,6 +36,8 @@ jad反编译的结果保存在 `/tmp/UserController.java`文件里了。
 
 ### sc查找加载UserController的ClassLoader
 
+`sc -d *UserController | grep classLoaderHash`{{execute T2}}
+
 ```bash
 $ sc -d *UserController | grep classLoaderHash
  classLoaderHash   1be6f5c3

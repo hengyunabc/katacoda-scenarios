@@ -12,11 +12,11 @@
 
 获取`UserController`类里的`logger`字段：
 
-`ognl @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
+`ognl -c 1be6f5c3 @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
 
 还可以通过`-x`参数控制返回值的展开层数。比如：
 
-`ognl -x 2 @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
+`ognl -c 1be6f5c3 -x 2 @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
 
 ### 执行多行表达式，赋值给临时变量，返回一个List
 

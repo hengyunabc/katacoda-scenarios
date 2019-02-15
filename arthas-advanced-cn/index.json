@@ -28,12 +28,16 @@
         "text": "jad.md"
       },
       {
-        "title": "案例: 热更新代码",
-        "text": "case-jad-mc-redefine.md"
-      },
-      {
         "title": "Ognl",
         "text": "ognl.md"
+      },
+      {
+        "title": "案例: 排查函数调用异常",
+        "text": "case-watch-method-exception.md"
+      },
+      {
+        "title": "案例: 热更新代码",
+        "text": "case-jad-mc-redefine.md"
       },
       {
         "title": "案例: 动态更新应用Logger Level",
@@ -42,10 +46,6 @@
       {
         "title": "案例: 排查logger冲突问题",
         "text": "case-logger-config-problem.md"
-      },
-      {
-        "title": "案例: 排查函数调用异常",
-        "text": "case-watch-method-exception.md"
       },
       {
         "title": "案例: 获取Spring Context",

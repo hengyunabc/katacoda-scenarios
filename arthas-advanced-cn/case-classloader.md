@@ -85,6 +85,8 @@ $ classloader -t
 
 比如上面查看到的spring LaunchedURLClassLoader的 hashcode是`1be6f5c3`，可以通过`-c`参数来列出它的所有urls：
 
+`classloader -c 1be6f5c3`{{execute T2}}
+
 ```
 $ classloader -c 1be6f5c3
 jar:file:/home/scrapbook/tutorial/demo-arthas-spring-boot.jar!/BOOT-INF/classes!/
@@ -105,6 +107,8 @@ $ classloader -c 1be6f5c3 -r logback-spring.xml
 ### 尝试加载指定的类
 
 比如用上面的spring LaunchedURLClassLoader 尝试加载 `java.lang.String` ：
+
+`classloader -c 1be6f5c3 --load java.lang.String`{{execute T2}}
 
 ```
 $ classloader -c 1be6f5c3 --load java.lang.String

@@ -40,8 +40,28 @@
         "text": "case-ognl-update-logger-level.md"
       },
       {
-        "title": "Watch",
-        "text": "watch.md"
+        "title": "案例: 排查logger冲突问题",
+        "text": "case-logger-config-problem.md"
+      },
+      {
+        "title": "案例: 排查函数调用异常",
+        "text": "case-watch-method-exception.md"
+      },
+      {
+        "title": "案例: 获取Spring Context",
+        "text": "case-get-spring-context.md"
+      },
+      {
+        "title": "案例: 排查HTTP请求返回401",
+        "text": "case-http-401.md"
+      },
+      {
+        "title": "案例: 排查HTTP请求返回404",
+        "text": "case-http-404.md"
+      },
+      {
+        "title": "案例: 理解Spring Boot应用的ClassLoader结构",
+        "text": "case-classloader.md"
       },
       {
         "title": "Thread",

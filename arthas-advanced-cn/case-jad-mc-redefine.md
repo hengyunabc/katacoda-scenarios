@@ -35,27 +35,7 @@ jad反编译的结果保存在 `/tmp/UserController.java`文件里了。
 ### sc查找加载UserController的ClassLoader
 
 ```bash
-$ sc -d *UserController
- class-info        com.example.demo.arthas.user.UserController
- code-source       file:/Users/hengyunabc/code/java/spring-boot-inside/demo-arthas-spring-boot/target/demo-arthas-spring-boot-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/
- name              com.example.demo.arthas.user.UserController
- isInterface       false
- isAnnotation      false
- isEnum            false
- isAnonymousClass  false
- isArray           false
- isLocalClass      false
- isMemberClass     false
- isPrimitive       false
- isSynthetic       false
- simple-name       UserController
- modifier          public
- annotation        org.springframework.web.bind.annotation.RestController
- interfaces
- super-class       +-java.lang.Object
- class-loader      +-org.springframework.boot.loader.LaunchedURLClassLoader@6b884d57
-                     +-sun.misc.Launcher$AppClassLoader@3d4eac69
-                       +-sun.misc.Launcher$ExtClassLoader@7494e528
+$ sc -d *UserController | grep classLoaderHash
  classLoaderHash   6b884d57
 ```
 

@@ -2,8 +2,6 @@
 
 在这个案例里，展示排查logger冲突的方法。
 
-
-
 ### 确认应用使用的logger系统
 
 以`UserController`为例，它使用的是slf4j api，但实际使用到的logger系统是logback。

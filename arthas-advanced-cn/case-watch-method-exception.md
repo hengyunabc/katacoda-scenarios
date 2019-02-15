@@ -2,13 +2,15 @@
 
 ### 现象
 
-访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/0 ，会打印出
+目前，访问 http://localhost/user/0 ，会返回500异常：
+
+`curl http://localhost/user/0`{{execute T3}}
 
 ```
-Something went wrong: 500 Internal Server Error
+{"timestamp":1550223186170,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"id < 1","path":"/user/0"}
 ```
 
-但具体的异常是什么呢？
+但请求的具体参数，异常栈是什么呢？
 
 ### 查看UserController的 参数/异常
 
@@ -21,7 +23,7 @@ Something went wrong: 500 Internal Server Error
 2. 第二个参数是函数名，支持通配
 
 
-访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/0 ,`watch`命令会打印调用的参数和异常
+访问 `curl http://localhost/user/0`{{execute T3}} ,`watch`命令会打印调用的参数和异常
 
 ```bash
 $ watch com.example.demo.arthas.user.UserController * '{params, throwExp}'

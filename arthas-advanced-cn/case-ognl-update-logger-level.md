@@ -9,15 +9,15 @@
 
 ```bash
 $ sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash
- classLoaderHash   6b884d57
+ classLoaderHash   1be6f5c3
 ```
 
 ### 用ognl获取logger
 
-`ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
+`ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
 
 ```bash
-$ ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'
+$ ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'
 @Logger[
     serialVersionUID=@Long[5454405123156820674],
     FQCN=@String[ch.qos.logback.classic.Logger],
@@ -36,14 +36,14 @@ $ ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'
 
 ### 单独设置UserController的logger level
 
-`ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger.setLevel(@ch.qos.logback.classic.Level@DEBUG)'`
+`ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger.setLevel(@ch.qos.logback.classic.Level@DEBUG)'`{{execute T2}}
 
 再次获取`UserController@logger`，可以发现已经是`DEBUG`了：
 
-`ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
+`ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
 
 ```bash
-$ ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'
+$ ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'
 @Logger[
     serialVersionUID=@Long[5454405123156820674],
     FQCN=@String[ch.qos.logback.classic.Logger],
@@ -62,5 +62,5 @@ $ ognl -c 6b884d57 '@com.example.demo.arthas.user.UserController@logger'
 
 通过获取`root` logger，可以修改全局的logger level：
 
-`ognl -c 6b884d57 '@org.slf4j.LoggerFactory@getLogger("root").setLevel(@ch.qos.logback.classic.Level@DEBUG)'`{{execute T2}}
+`ognl -c 1be6f5c3 '@org.slf4j.LoggerFactory@getLogger("root").setLevel(@ch.qos.logback.classic.Level@DEBUG)'`{{execute T2}}
 

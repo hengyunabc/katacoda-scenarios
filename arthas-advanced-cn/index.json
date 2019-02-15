@@ -64,8 +64,8 @@
         "text": "case-classloader.md"
       },
       {
-        "title": "Thread",
-        "text": "thread.md"
+        "title": "案例：查找Top N线程",
+        "text": "case-thread.md"
       },
       {
         "title": "Web Console",

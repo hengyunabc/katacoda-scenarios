@@ -26,6 +26,8 @@ Affect(class-cnt:1 , method-cnt:1) cost in 252 ms.
 
 ### 使用tt命令从调用记录里获取到spring context
 
+输入 `Q`{{execute T2}} 或者 `Ctrl + C` 退出上面的 `tt -t`命令。
+
 `tt -i 1000 -w 'target.getApplicationContext()'`{{execute T2}}
 
 ```bash
@@ -42,6 +44,8 @@ Affect(row-cnt:1) cost in 439 ms.
 ## 获取spring bean，并调用函数
 
 `tt -i 1000 -w 'target.getApplicationContext().getBean("helloWorldService").getHelloMessage()'`{{execute T2}}
+
+结果是：
 
 ```bash
 $ tt -i 1000 -w 'target.getApplicationContext().getBean("helloWorldService").getHelloMessage()'

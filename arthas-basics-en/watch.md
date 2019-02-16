@@ -1,6 +1,5 @@
-
-通过`watch`命令可以查看函数的参数/返回值/异常信息。
+The `watch` command can view the parameter/return value/exception of the method.
 
 `watch demo.MathGame primeFactors returnObj`{{execute T2}}
 
-输入 `Q`{{execute T2}} 或者 `Ctrl+C` 退出watch命令。
+Input `Q`{{execute T2}} or `Ctrl+C` to exit the watch command.

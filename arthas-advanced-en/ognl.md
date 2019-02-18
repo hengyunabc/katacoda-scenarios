@@ -1,24 +1,28 @@
 
-在Arthas里，有一个单独的`ognl`命令，可以动态执行代码。
+The `ognl` command can execute code dynamically.
 
-
-### 调用static函数
+### Invoke the static method
 
 `ognl '@java.lang.System@out.println("hello ognl")'`{{execute T2}}
 
 可以检查`Terminal 1`里的进程输出，可以发现打印出了`hello ognl`。
 
-### 获取静态类的静态字段
 
-获取`UserController`类里的`logger`字段：
+The `Terminal 1` will print `hello ognl`.
+
+### Get static fields of static classes
+
+Get the `logger` field of the `UserController` class:
 
 `ognl -c 1be6f5c3 @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
 
-还可以通过`-x`参数控制返回值的展开层数。比如：
+Control the number of expansion layers of the return value with the `-x` parameter. such as:
 
 `ognl -c 1be6f5c3 -x 2 @com.example.demo.arthas.user.UserController@logger`{{execute T2}}
 
-### 执行多行表达式，赋值给临时变量，返回一个List
+### Execute multi-line expressions
+
+Return a list:
 
 `ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("java.runtime.name"), {#value1, #value2}'`{{execute T2}}
 
@@ -30,11 +34,11 @@ $ ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("j
 ]
 ```
 
-### 更多
+### More
 
-在Arthas里`ognl`表达式是很重要的功能，在很多命令里都可以使用`ognl`表达式。
+The `ognl` expression in Arthas is an important feature, and the `ognl` expression can be used in many commands.
 
-一些更复杂的用法，可以参考：
+For some more complicated usages, refer to:
 
-* OGNL特殊用法请参考：https://github.com/alibaba/arthas/issues/71
-* OGNL表达式官方指南：https://commons.apache.org/proper/commons-ognl/language-guide.html
+* For special usage of OGNL, please refer to: https://github.com/alibaba/arthas/issues/71
+* Official Guide to OGNL Expressions: https://commons.apache.org/proper/commons-ognl/language-guide.html

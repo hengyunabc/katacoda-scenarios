@@ -1,19 +1,19 @@
 
-为了更好使用Arthas，下面先介绍Arthas里的一些使用技巧。
+Some tips on using Arthas.
 
 ### help
 
-Arthas里每一个命令都有详细的帮助信息。可以用`-h`来查看。帮助信息里有`EXAMPLES`和`WIKI`链接。
+Every command in Arthas has help doc. Can be viewed with `-h`. There are `EXAMPLES` and `WIKI` links in the help doc.
 
-比如：
+such as:
 
 `sysprop -h`{{execute T2}}
 
-### 自动补全
+### Auto completion
 
-Arthas支持丰富的自动补全功能，在使用有疑惑时，可以输入`Tab`来获取更多信息。
+Arthas supports a wide range of auto-completion features, and you can type `Tab` to get more information when you have doubts about your use.
 
-比如输入 `sysprop java.` 之后，再输入`Tab`，会补全出对应的key：
+For example, after typing `sysprop java.`, enter `Tab`, which will complete the corresponding key:
 
 ```
 $ sysprop java.
@@ -23,24 +23,24 @@ java.vm.vendor                java.vendor.url               java.vm.name
 ```
 
 
-### readline的快捷键支持
+### Readline shortcut key support
 
-Arthas支持常见的命令行快捷键，比如`Ctrl + A`跳转行首，`Ctrl + E`跳转行尾。
+Arthas supports common command line shortcuts, such as `Ctrl + A` to jump to the beginning of the line, and `Ctrl + E` to jump to the end of the line.
 
-更多的快捷键可以用 `keymap`{{execute T2}} 命令查看。
+More shortcuts can be viewed with the `keymap`{{execute T2}} command.
 
-### 历史命令的补全
 
-如果想再执行之前的命令，可以在输入一半时，按`Up/↑` 或者 `Ddown/↓`，来匹配到之前的命令。
+### Completion of history commands
 
-比如之前执行过`sysprop java.version`，那么在输入`sysprop ja`之后，可以输入`Up/↑`，就会自动补全为`sysprop java.version`。
+If you want to execute the previous command again, you can match the previous command by pressing `Up/↑` or `Ddown/↓` when you enter halfway.
 
-如果想查看所有的历史命令，也可以通过 `history`{{execute T2}} 命令查看到。
+For example, if `sysprop java.version` was executed before, then after entering `sysprop ja`, you can type `Up/↑`, and it will be automatically completed as `sysprop java.version`.
 
+If you want to see all the history commands, you can also view them with the `history`{{execute T2}} command.
 
 ### pipeline
 
-Arthas支持在pipeline之后，执行一些简单的命令，比如：
+Arthas supports some simple commands after the pipeline, such as:
 
 `sysprop | grep java`{{execute T2}} 
 

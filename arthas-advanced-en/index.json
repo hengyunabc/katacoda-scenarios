@@ -1,18 +1,18 @@
 {
-  "title": "Arthas 进阶",
-  "description": "Arthas 进阶",
+  "title": "Arthas Advanced",
+  "description": "Arthas Advanced",
   "details": {
     "steps": [
       {
-        "title": "启动demo",
+        "title": "Start demo",
         "text": "start-demo.md"
       },
       {
-        "title": "启动arthas-boot",
+        "title": "Start arthas-boot",
         "text": "arthas-boot.md"
       },
       {
-        "title": "查看JVM信息",
+        "title": "JVM Infomation",
         "text": "jvm-info.md"
       },
       {
@@ -20,7 +20,7 @@
         "text": "tips.md"
       },
       {
-        "title": "sc/sm 查看已加载的类",
+        "title": "sc/sm view loaded classes",
         "text": "sc-sm.md"
       },
       {
@@ -32,39 +32,39 @@
         "text": "ognl.md"
       },
       {
-        "title": "案例: 排查函数调用异常",
+        "title": "Case: Troubleshooting method invoke exception",
         "text": "case-watch-method-exception.md"
       },
       {
-        "title": "案例: 热更新代码",
+        "title": "Case: Hot swap code",
         "text": "case-jad-mc-redefine.md"
       },
       {
-        "title": "案例: 动态更新应用Logger Level",
+        "title": "Case: Change Logger Level",
         "text": "case-ognl-update-logger-level.md"
       },
       {
-        "title": "案例: 排查logger冲突问题",
+        "title": "Case: Troubleshoot logger conflicts",
         "text": "case-logger-config-problem.md"
       },
       {
-        "title": "案例: 获取Spring Context",
+        "title": "Case: Get the Spring Context",
         "text": "case-get-spring-context.md"
       },
       {
-        "title": "案例: 排查HTTP请求返回401",
+        "title": "Case: Troubleshooting HTTP request returns 401",
         "text": "case-http-401.md"
       },
       {
-        "title": "案例: 排查HTTP请求返回404",
+        "title": "Case: Troubleshooting HTTP request returns 404",
         "text": "case-http-404.md"
       },
       {
-        "title": "案例: 理解Spring Boot应用的ClassLoader结构",
+        "title": "Case: The ClassLoaders in Spring Boot application",
         "text": "case-classloader.md"
       },
       {
-        "title": "案例：查找Top N线程",
+        "title": "Case: Find CPU usage Top N threads",
         "text": "case-thread.md"
       },
       {
@@ -76,7 +76,7 @@
         "text": "exit.md"
       },
       {
-        "title": "arthas-boot支持的参数",
+        "title": "arthas-boot supported options",
         "text": "arthas-boot-details.md"
       }
     ],

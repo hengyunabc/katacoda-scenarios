@@ -1,30 +1,29 @@
 
-下面介绍Arthas里查看`JVM`信息的命令。
+The following describes the commands for viewing `JVM` information in Arthas.
 
 ### sysprop
 
-`sysprop`{{execute T2}} 可以打印所有的System Properties信息。
+`sysprop`{{execute T2}} can print all System Properties information.
 
-也可以指定单个key： `sysprop java.version`{{execute T2}}
+Specify a single key: `sysprop java.version`{{execute T2}}
 
-也可以通过`grep`来过滤： `sysprop | grep user`{{execute T2}}
+It can also be filtered by `grep`: `sysprop | grep user`{{execute T2}}
 
-可以设置新的value： `sysprop testKey testValue`{{execute T2}}
+Set a new value: `sysprop testKey testValue`{{execute T2}}
 
 ### sysenv
 
-`sysenv`{{execute T2}} 命令可以获取到环境变量。和`sysprop`命令类似。
-
+The `sysenv`{{execute T2}} command gets the environment variable. Similar to the `sysprop` command.
 
 
 ### jvm
 
-`jvm`{{execute T2}} 命令会打印出`JVM`的各种详细信息。
+The `jvm`{{execute T2}} command prints out various details of the `JVM`.
 
 
 ### dashboard
 
 
-`dashboard`{{execute T2}} 命令可以查看当前系统的实时数据面板。
+The `dashboard`{{execute T2}} command can view the real-time data panel of the current system.
 
-输入 `Q`{{execute T2}} 或者 `Ctrl+C` 可以退出dashboard命令。
+Enter `Q`{{execute T2}} or `Ctrl+C` to exit the dashboard command.

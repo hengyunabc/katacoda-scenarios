@@ -11,11 +11,11 @@
 
 `thread 16`{{execute T2}}
 
-### 查看top n线程的栈
+### 查看CPU使用率top n线程的栈
 
 `thread -n 3`{{execute T2}}
 
-查看5秒内的top n线程栈
+查看5秒内的CPU使用率top n线程栈
 
 `thread -n 3 -i 5000`{{execute T2}}
 

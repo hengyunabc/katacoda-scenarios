@@ -3,9 +3,9 @@
 
 ![Arthas](https://alibaba.github.io/arthas/_images/arthas.png)
 
-`Arthas` 是Alibaba开源的Java诊断工具，深受开发者喜爱。
+`Arthas` is a Java diagnostic tool open-sourced by Alibaba middleware team. Arthas helps developers in trouble-shooting issues in production environment for Java based applications without modifying code or restarting servers.
 
-本教程会以一个普通的Spring Boot应用为例，演示Arthas命令的详细用法。
+This tutorial takes a normal Spring Boot application as an example to demonstrate the advanced usage of the Arthas.
 
 * Github: https://github.com/alibaba/arthas
-* 文档: https://alibaba.github.io/arthas/
+* Docs: https://alibaba.github.io/arthas/

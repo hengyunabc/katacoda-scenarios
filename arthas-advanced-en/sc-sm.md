@@ -1,34 +1,33 @@
 
-下面介绍Arthas里查找已加载类的命令。
+The commands in Arthas for finding loaded classes.
 
 ### sc
 
-`sc` 命令可以查找到所有JVM已经加载到的类。
+The `sc` command finds all the classes that the JVM has loaded.
 
-
-如果搜索的是接口，还会搜索所有的实现类。比如查看所有的`Filter`实现类：
+When search an interface, it also search all implementation classes. For example, look at all the `Filter` implementation classes:
 
 `sc javax.servlet.Filter`{{execute T2}}
 
-通过`-d`参数，可以打印出类加载的具体信息，很方便查找类加载问题。
+With the `-d` option, it will print out the specific information of the loaded classes, which is very convenient for finding the class loading problem.
 
 `sc -d javax.servlet.Filter`{{execute T2}}
 
-`sc`支持通配，比如搜索所有的`StringUtils`：
+`sc` supports wildcards, such as searching for all `StringUtils`:
 
 `sc *StringUtils`{{execute T2}}
 
 ### sm
 
-`sm`命令则是查找类的具体函数。比如：
+The `sm` command find the specific method of the class. such as:
 
 `sm java.math.RoundingMode`{{execute T2}}
 
-通过`-d`参数可以打印函数的具体属性：
+With `-d` option, it will print the deatils of the method.
 
 `sm -d java.math.RoundingMode`{{execute T2}}
 
-也可以查找特定的函数，比如查找构造函数：
+Find specific methods, such as the constructors:
 
 `sm java.math.RoundingMode <init>`{{execute T2}}
 

@@ -1,8 +1,6 @@
 
 
-### 现象
-
-目前，访问 http://localhost/user/0 ，会返回500异常：
+Currently, visiting http://localhost/user/0 will return a 500 error:
 
 `curl http://localhost/user/0`{{execute T3}}
 
@@ -10,20 +8,21 @@
 {"timestamp":1550223186170,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"id < 1","path":"/user/0"}
 ```
 
-但请求的具体参数，异常栈是什么呢？
+But what are the specific parameters of the request, what is the exception stack?
 
-### 查看UserController的 参数/异常
+### View the parameters/exception of UserController
 
-在Arthas里执行：
+Execute in Arthas:
 
 `watch com.example.demo.arthas.user.UserController * '{params, throwExp}'`{{execute T2}}
 
 
-1. 第一个参数是类名，支持通配
-2. 第二个参数是函数名，支持通配
-
+1. The first argument is the class name, which supports wildcards.
+2. The second argument is the function name, which supports wildcards.
 
 访问 `curl http://localhost/user/0`{{execute T3}} ,`watch`命令会打印调用的参数和异常
+
+Visit `curl http://localhost/user/0`{{execute T3}} , the `watch` command will print the parameters and exception
 
 ```bash
 $ watch com.example.demo.arthas.user.UserController * '{params, throwExp}'
@@ -41,11 +40,18 @@ ts=2019-02-15 01:35:25; [cost=0.996655ms] result=@ArrayList[
 
 如果想把获取到的结果展开，可以用`-x`参数：
 
+
+The user can see that the actual thrown exception is `IllegalArgumentException`.
+
+The user can exit the watch command by typing `Q`{{execute T2}} or `Ctrl+C`.
+
+If the user want to expand the result, can use the `-x` option:
+
 `watch com.example.demo.arthas.user.UserController * '{params, throwExp}' -x 2`{{execute T2}}
 
-### 返回值表达式
+### The return value expression
 
-在上面的例子里，第三个参数是`返回值表达式`，它实际上是一个`ognl`表达式，它支持一些内置对象：
+In the above example, the third argument is the `return value expression`, which is actually an `ognl` expression that supports some built-in objects:
 
 * loader
 * clazz
@@ -58,23 +64,23 @@ ts=2019-02-15 01:35:25; [cost=0.996655ms] result=@ArrayList[
 * isThrow
 * isReturn
 
-你可以利用这些内置对象来组成不同的表达式。比如返回一个数组：
+You can use these built-in objects in the expressions. For example, return an array:
 
 `watch com.example.demo.arthas.user.UserController * '{params[0], target, returnObj}'`{{execute T2}}
 
 
-更多参考： https://alibaba.github.io/arthas/advice-class.html
+More references: https://alibaba.github.io/arthas/en/advice-class.html
 
 
-### 条件表达式
+### The conditional expression
 
-`watch`命令支持在第4个参数里写条件表达式，比如：
+The `watch` command supports conditional expressions in the fourth argument, such as:
 
 `watch com.example.demo.arthas.user.UserController * returnObj 'params[0] > 100'`{{execute T2}}
 
-当访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/1 时，`watch`命令没有输出
+When visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/1 , the `watch` command print nothing.
 
-当访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/101 时，`watch`会打印出结果。
+When visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/101 , the `watch` command will print:
 
 ```bash
 $ watch com.example.demo.arthas.user.UserController * returnObj 'params[0] > 100'
@@ -86,15 +92,15 @@ ts=2019-02-13 19:42:12; [cost=0.821443ms] result=@User[
 ]
 ```
 
-### 当异常时捕获
+### Capture when an exception occurs
 
-`watch`命令支持`-e`选项，表示只捕获抛出异常时的请求：
+The `watch` command supports the `-e` option, which means that only requests that throw an exception are caught:
 
 `watch com.example.demo.arthas.user.UserController * "{params[0],throwExp}" -e`{{execute T2}}
 
 
-### 按照耗时进行过滤
+### Filter by cost
 
-watch命令支持按请求耗时进行过滤，比如：
+The watch command supports filtering by cost, such as:
 
 `watch com.example.demo.arthas.user.UserController * '{params, returnObj}' '#cost>200'`{{execute T2}}

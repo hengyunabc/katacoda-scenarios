@@ -1,6 +1,6 @@
-下面介绍通过`jad`/`mc`/`redefine` 命令实现动态更新代码的功能。
+This case introduces the ability to dynamically update code via the `jad`/`mc`/`redefine` command.
 
-目前，访问 http://localhost/user/0 ，会返回500异常：
+Currently, visiting http://localhost/user/0 will return a 500 error:
 
 `curl http://localhost/user/0`{{execute T3}}
 
@@ -8,19 +8,20 @@
 {"timestamp":1550223186170,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"id < 1","path":"/user/0"}
 ```
 
-下面通过热更新代码，修改这个逻辑。
+This logic will be modified by `redefine` command below.
 
-### jad反编译UserController
+### Use jad command to decompile UserController
 
 `jad --source-only com.example.demo.arthas.user.UserController > /tmp/UserController.java`{{execute T2}}
 
-jad反编译的结果保存在 `/tmp/UserController.java`文件里了。
+The result of jad command will be saved in the `/tmp/UserController.java` file.
 
-再打开一个`Terminal 3`，然后用vim来编辑`/tmp/UserController.java`：
+
+Then open `Terminal 3`, use `vim` to edit `/tmp/UserController.java`:
 
 `vim /tmp/UserController.java`{{execute T3}}
 
-比如当 user id 小于1时，也正常返回，不抛出异常：
+For example, when the user id is less than 1, it also returns normally without throwing an exception:
 
 ```java
     @GetMapping(value={"/user/{id}"})
@@ -34,7 +35,7 @@ jad反编译的结果保存在 `/tmp/UserController.java`文件里了。
     }
 ```
 
-### sc查找加载UserController的ClassLoader
+### Use sc command to find the ClassLoader that loads the UserController
 
 `sc -d *UserController | grep classLoaderHash`{{execute T2}}
 
@@ -43,11 +44,11 @@ $ sc -d *UserController | grep classLoaderHash
  classLoaderHash   1be6f5c3
 ```
 
-可以发现是 spring boot `LaunchedURLClassLoader@1be6f5c3` 加载的。
+It can be found that it is loaded by spring boot `LaunchedURLClassLoader@1be6f5c3`.
 
 ### mc
 
-保存好`/tmp/UserController.java`之后，使用`mc`(Memory Compiler)命令来编译，并且通过`-c`参数指定ClassLoader：
+After saving `/tmp/UserController.java`, compile with the `mc` (Memory Compiler) command and specify the ClassLoader with the `-c` option:
 
 `mc -c 1be6f5c3 /tmp/UserController.java -d /tmp`{{execute T2}}
 
@@ -60,7 +61,7 @@ Affect(row-cnt:1) cost in 346 ms
 
 ### redefine
 
-再使用`redefine`命令重新加载新编译好的`UserController.class`：
+Then reload the newly compiled `UserController.class` with the `redefine` command:
 
 `redefine /tmp/com/example/demo/arthas/user/UserController.class`{{execute T2}}
 
@@ -69,9 +70,11 @@ $ redefine /tmp/com/example/demo/arthas/user/UserController.class
 redefine success, size: 1
 ```
 
-### 热修改代码结果
+### Check the results of the hotswap code
 
-`redefine`成功之后，再次访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/0 ，结果是：
+After the `redefine` command is executed successfully, visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/0 again.
+
+The result is:
 
 ```
 {

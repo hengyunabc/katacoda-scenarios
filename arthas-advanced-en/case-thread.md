@@ -1,25 +1,24 @@
 
 
-### 查看所有线程信息
+### View all thread information
 
 `thread`{{execute T2}}
 
 
-### 查看具体线程的栈
+### View the stack of specific threads
 
-查看线程ID 16的栈：
+View the stack of thread ID 16:
 
 `thread 16`{{execute T2}}
 
-### 查看top n线程的栈
+### View the stack of CPU usage TOP N threads
 
 `thread -n 3`{{execute T2}}
 
-查看5秒内的top n线程栈
+View the CPU usage TOP N thread stack in 5 seconds
 
 `thread -n 3 -i 5000`{{execute T2}}
 
-
-### 查找线程是否有阻塞
+### Find if the thread is blocked
 
 `thread -b`{{execute T2}}

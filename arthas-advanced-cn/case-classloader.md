@@ -46,7 +46,7 @@ $ classloader -a -c 65361d9a
  org.apache.jsp.jsp.hello_jsp
 ```
 
-### 反编绎jsp的代码
+### 反编译jsp的代码
 
 `jad org.apache.jsp.jsp.hello_jsp`{{execute T2}}
 

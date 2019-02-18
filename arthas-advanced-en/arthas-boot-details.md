@@ -1,28 +1,28 @@
 
 
-`arthas-boot.jar` 支持很多参数，可以执行 `java -jar arthas-boot.jar -h`{{execute T2}} 来查看。
+`arthas-boot.jar` supports many parameters and can be viewed by `java -jar arthas-boot.jar -h`{{execute T2}}.
 
-## 允许外部访问
+## Allow external network access
 
-默认情况下， arthas server侦听的是 `127.0.0.1` 这个IP，如果希望远程可以访问，可以使用`--target-ip`的参数。
+By default, the arthas server listens for the IP of `127.0.0.1`. If you want remote access, you can use the `--target-ip` option.
 
 `java -jar arthas-boot.jar --target-ip`{{execute T2}}
 
 
-## 列出所有的版本
+## List all versions
 
 
 `java -jar arthas-boot.jar --versions`{{execute T2}}
 
-使用指定版本：
+Use the specified version:
 
 `java -jar arthas-boot.jar --use-version 3.1.0`{{execute T2}}
 
-## 只侦听Telnet端口，不侦听HTTP端口
+## Only listens at the Telnet port and does not listen at the HTTP port.
 
 `java -jar arthas-boot.jar --telnet-port 9999 --http-port -1`{{execute T2}}
 
-## 打印运行的详情
+## Print verbose information
 
 `java -jar arthas-boot.jar -v`{{execute T2}}
 

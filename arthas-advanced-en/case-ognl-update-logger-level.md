@@ -1,9 +1,7 @@
 
+In this case, show how to dynamically modify the Logger Level.
 
-在这个案例里，动态修改应用的Logger Level。
-
-
-### 查找UserController的ClassLoader
+### Find the ClassLoader of the UserController
 
 `sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash`{{execute T2}}
 
@@ -12,7 +10,7 @@ $ sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash
  classLoaderHash   1be6f5c3
 ```
 
-### 用ognl获取logger
+### Use ognl command to get the logger
 
 `ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
 
@@ -34,11 +32,13 @@ $ ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'
 
 可以知道`UserController@logger`实际使用的是logback。可以看到`level=null`，则说明实际最终的level是从`root` logger里来的。
 
-### 单独设置UserController的logger level
+The user can know that `UserController@logger` actually uses logback. Because `level=null`, the actual final level is from the `root` logger.
+
+### Change the logger level of UserController
 
 `ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger.setLevel(@ch.qos.logback.classic.Level@DEBUG)'`{{execute T2}}
 
-再次获取`UserController@logger`，可以发现已经是`DEBUG`了：
+Get `UserController@logger` again, the user can see that it is already `DEBUG`:
 
 `ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
 
@@ -58,9 +58,9 @@ $ ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'
 ]
 ```
 
-### 修改logback的全局logger level
+### Change the global logger level of the logback
 
-通过获取`root` logger，可以修改全局的logger level：
+By getting the `root` logger, the user can modify the global logger level:
 
 `ognl -c 1be6f5c3 '@org.slf4j.LoggerFactory@getLogger("root").setLevel(@ch.qos.logback.classic.Level@DEBUG)'`{{execute T2}}
 

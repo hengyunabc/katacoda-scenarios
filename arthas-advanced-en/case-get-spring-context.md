@@ -1,18 +1,18 @@
 
 
-在这个案例里，展示获取spring context，再获取bean，然后调用函数。
+In this case, the user can get the spring context, get the bean, and invoke the method.
 
-### 使用tt命令获取到spring context
+### Use the tt command to record the invocation of the specified method
 
-`tt`即 TimeTunnel，它可以记录下指定方法每次调用的入参和返回信息，并能对这些不同的时间下调用进行观测。
+`tt` is TimeTunnel, which records the parameters and return value of each invocation of the specified method.
 
 * https://alibaba.github.io/arthas/tt.html
 
 `tt -t org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter invokeHandlerMethod`{{execute T2}}
 
-访问：https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/1
+Visit: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/1
 
-可以看到`tt`命令捕获到了一个请求：
+You can see that the `tt` command record an invocation:
 
 ```bash
 $ tt -t org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdaptePress Q or Ctrl+C to abort.
@@ -24,9 +24,9 @@ Affect(class-cnt:1 , method-cnt:1) cost in 252 ms.
        15:38:32     923          se              lerAdapter
 ```
 
-### 使用tt命令从调用记录里获取到spring context
+### Use the tt command to get the spring context from the invocation record.
 
-输入 `Q`{{execute T2}} 或者 `Ctrl + C` 退出上面的 `tt -t`命令。
+Type `Q`{{execute T2}} or `Ctrl + C` to exit the `tt -t` command above.
 
 `tt -i 1000 -w 'target.getApplicationContext()'`{{execute T2}}
 
@@ -41,11 +41,11 @@ $ tt -i 1000 -w 'target.getApplicationContext()'
 Affect(row-cnt:1) cost in 439 ms.
 ```
 
-## 获取spring bean，并调用函数
+## Get the spring bean and invoke method
 
 `tt -i 1000 -w 'target.getApplicationContext().getBean("helloWorldService").getHelloMessage()'`{{execute T2}}
 
-结果是：
+The result is:
 
 ```bash
 $ tt -i 1000 -w 'target.getApplicationContext().getBean("helloWorldService").getHelloMessage()'

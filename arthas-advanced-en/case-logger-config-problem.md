@@ -1,10 +1,11 @@
 
 
-在这个案例里，展示排查logger冲突的方法。
 
-### 确认应用使用的logger系统
+In this case, show how to troubleshoot logger conflicts.
 
-以`UserController`为例，它使用的是slf4j api，但实际使用到的logger系统是logback。
+### View the logger system used by the app
+
+Take `UserController` as an example, it uses slf4j api, but the actual logger system used is logback.
 
 `ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'`{{execute T2}}
 
@@ -25,13 +26,13 @@ $ ognl -c 1be6f5c3 '@com.example.demo.arthas.user.UserController@logger'
 ]
 ```
 
-### 获取logback实际加载的配置文件
+### Find the configuration file actually loaded by the logback
 
 
 `ognl -c 1be6f5c3 '#map1=@org.slf4j.LoggerFactory@getLogger("root").loggerContext.objectMap, #map1.get("CONFIGURATION_WATCH_LIST")'`{{execute T2}}
 
 
-### 使用classloader命令查找可能存在的logger配置文件
+### Use the classloader command to find possible logger configuration files
 
 `classloader -c 1be6f5c3 -r logback-spring.xml`{{execute T2}}
 
@@ -41,9 +42,9 @@ $ classloader -c 1be6f5c3 -r logback-spring.xml
 
 Affect(row-cnt:1) cost in 13 ms.
 ```
-可以知道加载的配置的具体来源。
+You can know the specific source of the loaded configuration.
 
-可以尝试加载容易冲突的文件：
+You can try to load files that are prone to conflict:
 
 `classloader -c 1be6f5c3 -r logback.xml`{{execute T2}}
 

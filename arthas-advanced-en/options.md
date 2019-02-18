@@ -1,24 +1,23 @@
 
 
 
-在Arthas里有一些开关，可以通过 `options`{{execute T2}} 命令来查看。
+There are some switches in Arthas that can be viewed with the `options`{{execute T2}} command.
 
 
-查看单个option的值，比如
+View the value of a single option, such as
 
 `options unsafe`{{execute T2}}
 
 
-## 允许增强JDK的类
+## Allow to enhance the classes of JDK
 
-默认情况下`unsafe`为false，即watch/trace等命令不会增加JVM的类，即`java.*`下面的类。
+By default, `unsafe` is false, ie commands such as `watch`/`trace` do not enhance the JVM class, which is the class starting with `java.*`.
 
-如果想增强JVM里的类，可以执行 `options unsafe true`{{execute T2}} ，设置`unsafe`为true。
+To enhance the classes in the JVM, execute `options unsafe true`{{execute T2}} to set `unsafe` to true.
 
+## Print objects in JSON format
 
-## 以JSON格式打印对象
-
-当 `json-format` 为false时，输出结果是：
+When `json-format` is false, the output is:
 
 ```bash
 $ ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("java.runtime.name"), {#value1, #value2}'
@@ -30,7 +29,7 @@ $ ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("j
 
 `options json-format true`{{execute T2}}
 
-当 `json-format` 为true时，输出结果是：
+When `json-format` is true, the output is:
 
 ```bash
 $ ognl '#value1=@System@getProperty("java.home"), #value2=@System@getProperty("java.runtime.name"), {#v["/usr/lib/jvm/java-8-oracle/jre","Java(TM) SE Runtime Environment"]

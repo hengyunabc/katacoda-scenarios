@@ -11,7 +11,7 @@
 
 ## 允许增强JDK的类
 
-默认情况下`unsafe`为false，即watch/trace等命令不会增加JVM的类，即`java.*`下面的类。
+默认情况下`unsafe`为false，即watch/trace等命令不会增强JVM的类，即`java.*`下面的类。
 
 如果想增强JVM里的类，可以执行 `options unsafe true`{{execute T2}} ，设置`unsafe`为true。
 

@@ -1,10 +1,10 @@
 
 
-下面介绍`classloader`命令的功能。
+The following describes the usage of the `classloader` command.
 
-先访问一个jsp网页，触发jsp的加载： https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/hello
+First visit the jsp page: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/hello
 
-### 列出所有ClassLoader
+### List all ClassLoaders
 
 `classloader -l`{{execute T2}}
 
@@ -31,12 +31,12 @@ $ classloader -l
  sun.misc.Launcher$ExtClassLoader@7494e528                        4            7494e528  null
 ```
 
-* TomcatEmbeddedWebappClassLoader 加载的class数量是0，所以在spring boot embedded tomcat里，它只是一个空壳，所有的类加载都是`LaunchedURLClassLoader`完成的
+* The number of classes loaded by TomcatEmbeddedWebappClassLoader is 0, so in spring boot embedded tomcat, it is just an empty ClassLoader, all the classes are loaded by `LaunchedURLClassLoader`
 
 
-### 列出ClassLoader里加载的所有类
+### List all classes loaded in ClassLoader
 
-列出上面的`org.apache.jasper.servlet.JasperLoader`加载的类：
+List all classes loaded by `org.apache.jasper.servlet.JasperLoader`:
 
 `classloader -a -c 65361d9a`{{execute T2}}
 
@@ -46,7 +46,7 @@ $ classloader -a -c 65361d9a
  org.apache.jsp.jsp.hello_jsp
 ```
 
-### 反编绎jsp的代码
+### Decompile dynamically generated jsp classes
 
 `jad org.apache.jsp.jsp.hello_jsp`{{execute T2}}
 
@@ -60,7 +60,7 @@ ClassLoader:
 ...
 ```
 
-### 查看ClassLoader树
+### View the ClassLoader tree
 
 
 `classloader -t`{{execute T2}}
@@ -81,9 +81,9 @@ $ classloader -t
         +-org.apache.jasper.servlet.JasperLoader@21ae0fe2
 ```
 
-### 列出ClassLoader的urls
+### List the urls of the ClassLoader
 
-比如上面查看到的spring LaunchedURLClassLoader的 hashcode是`1be6f5c3`，可以通过`-c`参数来列出它的所有urls：
+For example, the hashcode of spring `LaunchedURLClassLoader` viewed above is `1be6f5c3`, and all its urls can be listed by the `-c` parameter:
 
 `classloader -c 1be6f5c3`{{execute T2}}
 
@@ -95,18 +95,18 @@ jar:file:/home/scrapbook/tutorial/demo-arthas-spring-boot.jar!/BOOT-INF/lib/spri
 ...
 ```
 
-### 加载指定ClassLoader里的资源文件
+### Load the resource file in the specified ClassLoader
 
-查找指定的资源文件： `classloader -c 1be6f5c3 -r logback-spring.xml`{{execute T2}}
+Load the specified resource file: `classloader -c 1be6f5c3 -r logback-spring.xml`{{execute T2}}
 
 ```
 $ classloader -c 1be6f5c3 -r logback-spring.xml
  jar:file:/home/scrapbook/tutorial/demo-arthas-spring-boot.jar!/BOOT-INF/classes!/logback-spring.xml
 ```
 
-### 尝试加载指定的类
+### Try to load the specified class
 
-比如用上面的spring LaunchedURLClassLoader 尝试加载 `java.lang.String` ：
+For example, try loading `java.lang.String` with spring LaunchedURLClassLoader :
 
 `classloader -c 1be6f5c3 --load java.lang.String`{{execute T2}}
 

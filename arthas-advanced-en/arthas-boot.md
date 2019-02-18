@@ -2,15 +2,15 @@
 
 
 
-在新的`Terminal 2`里，下载`arthas-boot.jar`，再用`java -jar`命令启动：
+In the new `Terminal 2`, download `arthas-boot.jar` and start with the `java -jar` command:
 
 `wget https://alibaba.github.io/arthas/arthas-boot.jar
 java -jar arthas-boot.jar --target-ip 0.0.0.0`{{execute T2}}
 
-`arthas-boot`是`Arthas`的启动程序，它启动后，会列出所有的Java进程，用户可以选择需要诊断的目标进程。
+`arthas-boot` is the launcher for `Arthas`. It lists all the Java processes, and the user can select the target process to be diagnosed.
 
-选择第一个进程，输入 `1`{{execute T2}} ，再`Enter/回车`：
+Select the first process, type `1`{{execute T2}} ，then type `Enter`：
 
-Attach成功之后，会打印Arthas LOGO。输入 `help`{{execute T2}} 可以获取到更多的帮助信息。
+After the Attach is successful, Arthas LOGO is printed. Enter `help`{{execute T2}} for more help.
 
-![Arthas Boot](/hengyunabc/scenarios/arthas-advanced-cn/assets/arthas-boot.png)
+![Arthas Boot](/hengyunabc/scenarios/arthas-advanced-en/assets/arthas-boot.png)

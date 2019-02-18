@@ -1,32 +1,32 @@
 
 
-在这个案例里，展示排查HTTP 404问题的技巧。
+In this case, the user will resolve the HTTP 404 issue.
 
-访问： https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/a.txt 
+Visit: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/a.txt 
 
-结果是：
+The result is:
 
 ```
 Something went wrong: 404 Not Found
 ```
 
-那么到底是哪个Servlet处理了这个请求，返回了404？
+So which servlet is handle this request and returning 404?
 
-### 跟踪所有的Servlet函数
+### Trace all the Servlet methods
 
-开始trace：
+Start trace:
 
 `trace javax.servlet.Servlet * > /tmp/servlet.txt`{{execute T2}}
 
-访问： https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/a.txt
+Visit: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/a.txt
 
-在`Terminal 3`里，查看`/tmp/servlet.txt`的内容：
+In `Terminal 3`, view the contents of `/tmp/servlet.txt`:
 
 `less /tmp/servlet.txt`{{execute T3}}
 
-`/tmp/servlet.txt`里的内容会比较多，需要耐心找到调用树里最长的地方。
+The contents of `/tmp/servlet.txt` will be more, and you need to be patient to find the longest level in the call tree.
 
-可以发现请求最终是被`freemarker`处理的：
+It can be found that the request is handled by `freemarker`:
 
 ```
 `---[13.974188ms] org.springframework.web.servlet.ViewResolver:resolveViewName()

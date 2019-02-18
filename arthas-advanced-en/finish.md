@@ -5,4 +5,4 @@ In the `Advanced Tutorial`, there are most of the advanced usages of Arthas and 
 * Documentation: https://alibaba.github.io/arthas
 
 
-If you are using Arthas, please let us know that your use is very important to us: [View] (https://github.com/alibaba/arthas/issues/111)
+If you are using Arthas, please let us know that your use is very important to us: [View](https://github.com/alibaba/arthas/issues/111)

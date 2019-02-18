@@ -20,8 +20,6 @@ Execute in Arthas:
 1. The first argument is the class name, which supports wildcards.
 2. The second argument is the function name, which supports wildcards.
 
-访问 `curl http://localhost/user/0`{{execute T3}} ,`watch`命令会打印调用的参数和异常
-
 Visit `curl http://localhost/user/0`{{execute T3}} , the `watch` command will print the parameters and exception
 
 ```bash
@@ -33,12 +31,6 @@ ts=2019-02-15 01:35:25; [cost=0.996655ms] result=@ArrayList[
     @IllegalArgumentException[java.lang.IllegalArgumentException: id < 1],
 ]
 ```
-
-可以看到实际抛出的异常是`IllegalArgumentException`。
-
-可以输入 `Q`{{execute T2}} 或者 `Ctrl+C` 退出watch命令。
-
-如果想把获取到的结果展开，可以用`-x`参数：
 
 
 The user can see that the actual thrown exception is `IllegalArgumentException`.

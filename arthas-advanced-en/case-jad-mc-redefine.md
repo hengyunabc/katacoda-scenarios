@@ -53,7 +53,7 @@ After saving `/tmp/UserController.java`, compile with the `mc` (Memory Compiler)
 `mc -c 1be6f5c3 /tmp/UserController.java -d /tmp`{{execute T2}}
 
 ```bash
-$ mc /tmp/UserController.java -d /tmp
+$ mc -c 1be6f5c3 /tmp/UserController.java -d /tmp
 Memory compiler output:
 /tmp/com/example/demo/arthas/user/UserController.class
 Affect(row-cnt:1) cost in 346 ms

@@ -55,6 +55,7 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "java"
+    "imageid": "java",
+    "environmentsprotocol": "http"
   }
 }

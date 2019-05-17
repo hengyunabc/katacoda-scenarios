@@ -6,7 +6,7 @@ Arthas支持通过Web Socket来连接。
 ## 访问在线教程里的Arthas WebConsole
 
 
-访问网址： http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
 
 
 ## 本地体验

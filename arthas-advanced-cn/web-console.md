@@ -6,8 +6,9 @@ Arthas支持通过Web Socket来连接。
 ## 访问在线教程里的Arthas WebConsole
 
 
+在线程里开放的Web Console: http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/?ip=[[HOST_SUBDOMAIN]]-8563-[[KATACODA_HOST]].environments.katacoda.com&port=80
 
-
+> 注意：教程里访问的是80端口，因为做了端口转发。在本地体验时，需要访问8563端口。
 
 ## 本地体验
 

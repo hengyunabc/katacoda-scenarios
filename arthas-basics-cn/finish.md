@@ -4,3 +4,7 @@
 * [Arthas进阶](https://alibaba.github.io/arthas/arthas-tutorials?language=cn&id=arthas-advanced)
 * [Arthas Github](https://github.com/alibaba/arthas)
 * [Arthas 文档](https://alibaba.github.io/arthas/)
+
+欢迎关注公众号，获取Arthas项目的信息，源码分析，案例实践。
+
+![Arthas公众号](/hengyunabc/scenarios/arthas-basics-cn/assets/qrcode_gongzhonghao.jpg)

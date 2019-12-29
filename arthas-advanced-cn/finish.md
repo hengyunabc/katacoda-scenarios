@@ -6,3 +6,7 @@
 
 
 如果您在使用Arthas，请让我们知道，您的使用对我们非常重要：[查看](https://github.com/alibaba/arthas/issues/111)
+
+欢迎关注公众号，获取Arthas项目的信息，源码分析，案例实践。
+
+![Arthas公众号](/hengyunabc/scenarios/arthas-basics-cn/assets/qrcode_gongzhonghao.jpg)

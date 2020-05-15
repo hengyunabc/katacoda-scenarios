@@ -8,6 +8,16 @@
 
 可以检查`Terminal 1`里的进程输出，可以发现打印出了`hello ognl`。
 
+
+### 查找UserController的ClassLoader
+
+`sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash`{{execute T2}}
+
+```bash
+$ sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash
+ classLoaderHash   1be6f5c3
+```
+
 ### 获取静态类的静态字段
 
 获取`UserController`类里的`logger`字段：

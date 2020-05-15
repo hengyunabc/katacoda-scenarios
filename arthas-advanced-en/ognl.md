@@ -10,6 +10,16 @@ The `ognl` command can execute code dynamically.
 
 The `Terminal 1` will print `hello ognl`.
 
+
+### Find the ClassLoader of the UserController
+
+`sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash`{{execute T2}}
+
+```bash
+$ sc -d com.example.demo.arthas.user.UserController | grep classLoaderHash
+ classLoaderHash   1be6f5c3
+```
+
 ### Get static fields of static classes
 
 Get the `logger` field of the `UserController` class:

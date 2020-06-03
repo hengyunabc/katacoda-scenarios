@@ -8,7 +8,7 @@ Arthas在 watch/trace 等命令时，实际上是修改了应用的字节码，�
 
  `reset -h`{{execute T2}}
 
-```
+```bash
 $ reset -h
  USAGE:
    reset [-h] [-E] [class-pattern]
@@ -29,7 +29,7 @@ $ reset -h
 
 ## 还原指定类
 
-```
+```bash
 $ trace Test test
 Press Ctrl+C to abort.
 Affect(class-cnt:1 , method-cnt:1) cost in 57 ms.
@@ -45,7 +45,7 @@ Affect(class-cnt:1 , method-cnt:0) cost in 11 ms.
 
 ## 还原所有类
 
-```
+```bash
 $ trace Test test
 Press Ctrl+C to abort.
 Affect(class-cnt:1 , method-cnt:1) cost in 57 ms.

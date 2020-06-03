@@ -20,30 +20,18 @@ Arthas is built to solve these issues. A developer can troubleshoot production i
 ## Key features
 
 - Check whether a class is loaded? Or where the class is loaded from? (Useful for trouble-shooting jar file conflicts)
-
 - Decompile a class to ensure the code is running as expected.
-
 - Check classloader statistics, e.g. the number of classloaders, the number of classes loaded per classloader, the classloader hierarchy, possible classloader leaks, etc.
-
 - Check the method invocation details, e.g. method parameter, returned values, exceptions and etc.
-
 - Check the stack trace of specified method invocation. This is useful when a developer wants to know the caller of the method.
-
 - Trace the method invocation to find slow sub-invocations.
-
 - Monitor method invocation statistics, e.g. QPS (Query Per Second), RT (Return Time), success rate and etc.
-
 - Monitor system metrics, thread states and CPU usage, GC statistics and etc.
-
 - Supports command line interactive mode, with auto-complete feature enabled.
-
 - Supports telnet and WebSocket, which enables both local and remote diagnostics with command line and browsers.
-
 - Supports profiler/Flame Graph
-
 - Supports JDK 6+
-
-Supports Linux/Mac/Windows
+- Supports Linux/Mac/Windows
 
 This tutorial takes a normal Spring Boot application as an example to demonstrate the use cases of the Arthas.
 

@@ -3,7 +3,7 @@
 
 `session`{{execute T2}}
 
-```
+```bash
 [arthas@37]$ session
  Name        Value
 --------------------------------------------------

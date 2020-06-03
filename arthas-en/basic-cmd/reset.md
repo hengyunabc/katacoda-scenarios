@@ -8,7 +8,7 @@ When Arthas executes commands such as watch/trace, it actually modifies the appl
 
  `reset -h`{{execute T2}}
 
-```
+```bash
 $ reset -h
  USAGE:
    reset [-h] [-E] [class-pattern]
@@ -29,7 +29,7 @@ $ reset -h
 
 ## Reset specified class
 
-```
+```bash
 $ trace Test test
 Press Ctrl+C to abort.
 Affect(class-cnt:1 , method-cnt:1) cost in 57 ms.
@@ -45,7 +45,7 @@ Affect(class-cnt:1 , method-cnt:0) cost in 11 ms.
 
 ## Reset all classes
 
-```
+```bash
 $ trace Test test
 Press Ctrl+C to abort.
 Affect(class-cnt:1 , method-cnt:1) cost in 57 ms.

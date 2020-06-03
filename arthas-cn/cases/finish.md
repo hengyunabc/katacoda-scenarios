@@ -9,4 +9,4 @@
 
 欢迎关注公众号，获取Arthas项目的信息，源码分析，案例实践。
 
-![Arthas公众号](/hollowman/scenarios/arthas-command-cn/assets/qrcode_gongzhonghao.jpg)
+![Arthas公众号](/hollowman/scenarios/arthas-cn/assets/qrcode_gongzhonghao.jpg)

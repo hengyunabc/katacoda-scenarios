@@ -4,14 +4,9 @@
     "icon": "fa-katacoda",
     "courses": [
       {
-        "course_id": "arthas-basics-cn",
-        "title": "Arthas基础教程",
-        "description": "Arthas基础教程"
-      },
-      {
-        "course_id": "arthas-advanced-cn",
-        "title": "Arthas进阶教程",
-        "description": "Arthas进阶教程"
+        "course_id": "cases",
+        "title": "Arthas 案例",
+        "description": "这里精选了一些使用Arthas过程中可能出现的情况以及解决方案，供你参考！"
       }
     ]
 }

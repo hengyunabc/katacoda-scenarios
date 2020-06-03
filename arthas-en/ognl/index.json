@@ -1,6 +1,6 @@
 {
-  "title": "Arthas Basic Command and Knowledge",
-  "description": "Arthas Basic Command and Knowledge",
+  "title": "ognl",
+  "description": "ognl",
   "details": {
     "steps": [
       {
@@ -12,35 +12,15 @@
         "text": "arthas-boot.md"
       },
       {
-        "title": "cls",
-        "text": "cls.md"
+        "title": "ognl Details",
+        "text": "ognl.md"
       },
       {
-        "title": "session",
-        "text": "session.md"
+        "title": "Case: Change Logger Level",
+        "text": "case-ognl-update-logger-level.md"
       },
       {
-        "title": "reset",
-        "text": "reset.md"
-      },
-      {
-        "title": "version",
-        "text": "version.md"
-      },
-      {
-        "title": "history",
-        "text": "history.md"
-      },
-      {
-        "title": "keymap",
-        "text": "keymap.md"
-      },
-      {
-        "title": "Tips",
-        "text": "tips.md"
-      },
-      {
-        "title": "exit/quit/stop",
+        "title": "Exit/Stop",
         "text": "exit.md"
       }
     ],

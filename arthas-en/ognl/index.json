@@ -20,6 +20,10 @@
         "text": "case-ognl-update-logger-level.md"
       },
       {
+        "title": "Case: Troubleshoot logger conflicts",
+        "text": "case-logger-config-problem.md"
+      },
+      {
         "title": "Exit/Stop",
         "text": "exit.md"
       }

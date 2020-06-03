@@ -20,6 +20,10 @@
         "text": "case-ognl-update-logger-level.md"
       },
       {
+        "title": "案例: 排查logger冲突问题",
+        "text": "case-logger-config-problem.md"
+      },
+      {
         "title": "Exit/Stop",
         "text": "exit.md"
       }

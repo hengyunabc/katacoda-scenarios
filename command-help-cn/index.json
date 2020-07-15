@@ -12,28 +12,12 @@
         "text": "arthas-boot.md"
       },
       {
-        "title": "Dashboard",
-        "text": "dashboard.md"
+        "title": "help 命令",
+        "text": "help.md"
       },
       {
-        "title": "Thread",
-        "text": "thread.md"
-      },
-      {
-        "title": "Sc",
-        "text": "sc.md"
-      },
-      {
-        "title": "Jad",
-        "text": "jad.md"
-      },
-      {
-        "title": "Watch",
-        "text": "watch.md"
-      },
-      {
-        "title": "Exit/Stop",
-        "text": "exit.md"
+        "title": "查看具休命令的help信息",
+        "text": "help-sysprop.md"
       }
     ],
     "intro": {

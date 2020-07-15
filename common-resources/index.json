@@ -2,6 +2,12 @@
   "title": "common resources",
   "description": "common resources",
   "details": {
+    "steps": [
+      {
+        "title": "hello",
+        "text": "hello.md"
+      }
+    ],
     "intro": {
       "text": "intro.md"
     },

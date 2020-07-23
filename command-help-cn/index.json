@@ -5,19 +5,19 @@
     "steps": [
       {
         "title": "启动arthas-demo",
-        "text": "arthas-demo.md"
+        "text": "../common-resources/hello.md"
       },
       {
         "title": "启动arthas-boot",
-        "text": "arthas-boot.md"
+        "text": "../common-resources/hello.md"
       },
       {
         "title": "help 命令",
-        "text": "help.md"
+        "text": "../common-resources/hello.md"
       },
       {
-        "title": "查看具休命令的help信息",
-        "text": "help-sysprop.md"
+        "title": "查看具体命令的help信息",
+        "text": "../common-resources/hello.md"
       }
     ],
     "intro": {

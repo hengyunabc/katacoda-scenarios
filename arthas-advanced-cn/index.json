@@ -106,7 +106,7 @@
     ]
   },
   "backend": {
-    "imageid": "java",
+    "imageid": "openjdk:15",
     "environmentsprotocol": "http"
   }
 }

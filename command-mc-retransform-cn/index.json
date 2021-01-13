@@ -1,6 +1,6 @@
 {
-  "title": "Arthas mc-redefine命令",
-  "description": "Arthas mc-redefine命令",
+  "title": "Arthas mc-retransform命令",
+  "description": "Arthas mc-retransform命令",
   "difficulty": "精通者",
   "time": "10-20 分钟",
   "details": {
@@ -51,7 +51,7 @@
     ]
   },
   "backend": {
-    "imageid": "java",
+    "imageid": "openjdk:15",
     "environmentsprotocol": "http"
   }
 }

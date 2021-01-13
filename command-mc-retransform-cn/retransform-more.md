@@ -11,7 +11,9 @@
 ```bash
 $ retransform -l
 Id              ClassName       TransformCount  LoaderHash      LoaderClassName
-1               demo.MathGame   1               null            null
+1               com.example.dem 1               null            null
+                o.arthas.user.U
+                serController
 ```
 
 * TransformCount 统计在 ClassFileTransformer#transform 函数里尝试返回 entry对应的 .class文件的次数，但并不表明transform一定成功。
@@ -36,12 +38,12 @@ retransform --deleteAll
 
 ### 显式触发 retransform
 
-`retransform --classPattern demo.MathGame`{{execute T2}}
+`retransform --classPattern com.example.demo.arthas.user.UserController`{{execute T2}}
 
 ```bash
-$ retransform --classPattern demo.MathGame
+$ retransform --classPattern com.example.demo.arthas.user.UserController
 retransform success, size: 1, classes:
-demo.MathGame
+com.example.demo.arthas.user.UserController
 ```
 
 > 注意：对于同一个类，当存在多个 retransform entry时，如果显式触发 retransform ，则最后添加的entry生效(id最大的)。
@@ -54,3 +56,7 @@ demo.MathGame
 * 重新触发 retransform
 
 > 如果不清除掉所有的 retransform entry，并重新触发 retransform ，则arthas stop时，retransform过的类仍然生效。
+
+在上面删掉 retransform entry，再显式触发 retransform之后，可以用 `jad`命令来确认之前retransform的结果已经被消除了。
+
+再次访问 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/0 ，会抛出异常。

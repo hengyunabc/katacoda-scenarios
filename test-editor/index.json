@@ -1,0 +1,30 @@
+{
+  "noindex": true,
+  "title": "Scenario with Editor Terminal UI",
+  "description": "Katacoda Scenario Example",
+  "details": {
+      "steps": [
+          {
+              "text": "step1.md",
+              "code": "setup.sh"
+          }
+      ],
+      "intro": {
+          "text": "intro.md",
+          "credits": ""
+      }
+  },
+  "files": [
+      "app.js", "index.js"
+  ],
+  "environment": {
+      "hidefinish": true,
+      "hideHiddenFiles": true,
+      "uilayout": "editor-terminal",
+      "uisettings": "javascript",
+      "uieditorpath": "/root/example"
+  },
+  "backend": {
+      "imageid": "nodejs:12"
+  }
+}

@@ -15,7 +15,7 @@
       }
   },
   "files": [
-      "app.js", "index.js"
+      "app.js", "ognl-demo/pom.xml"
   ],
   "environment": {
       "hidefinish": true,

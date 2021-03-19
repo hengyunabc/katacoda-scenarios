@@ -15,7 +15,6 @@
       }
   },
   "files": [
-      "app.js"
   ],
   "environment": {
       "hidefinish": true,

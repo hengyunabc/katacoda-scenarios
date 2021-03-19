@@ -1,7 +1,7 @@
 {
   "noindex": true,
-  "title": "Scenario with Editor Terminal UI",
-  "description": "Katacoda Scenario Example",
+  "title": "调试 Arthas 的 ognl 表达式",
+  "description": "调试 Arthas 的 ognl 表达式",
   "details": {
       "steps": [
           {

@@ -4,6 +4,11 @@ to the user's home directory.
 
 # Index.json
 
+
+
+`ognl-demo/pom.xml`{{open}}
+
+
 The editor will display and interact with files relative to the `uieditorpath`
 you set in the `index.json` file for your scenario.
 

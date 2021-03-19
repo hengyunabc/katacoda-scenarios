@@ -15,14 +15,14 @@
       }
   },
   "files": [
-      "app.js", "ognl-demo/pom.xml"
+      "app.js"
   ],
   "environment": {
       "hidefinish": true,
       "hideHiddenFiles": true,
       "uilayout": "editor-terminal",
       "uisettings": "javascript",
-      "uieditorpath": "/root/example"
+      "uieditorpath": "/root/example/ognl-demo"
   },
   "backend": {
       "imageid": "openjdk:15"

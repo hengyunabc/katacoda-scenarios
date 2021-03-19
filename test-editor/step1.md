@@ -8,7 +8,7 @@
 
 # 编译运行代码
 
-`mvn compile exec:java`{{execute T2}}
+`mvn compile exec:java`{{execute T1}}
 
 结果类似下面的表达式：
 
@@ -17,7 +17,7 @@ watch com.example.ognl.TestService test "{target, params, returnObj, #cost}" "pa
 ```
 # 查看函数抛出异常时的表达式结果
 
-`mvn compile exec:java`{{execute T2}}
+`mvn compile exec:java`{{execute T1}}
 
 结果类似下面的表达式：
 

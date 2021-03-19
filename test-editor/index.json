@@ -18,10 +18,9 @@
   "files": [
   ],
   "environment": {
-      "hidefinish": true,
       "hideHiddenFiles": true,
       "uilayout": "editor-terminal",
-      "uisettings": "javascript",
+      "uisettings": "java",
       "uieditorpath": "/root/example/ognl-demo"
   },
   "backend": {

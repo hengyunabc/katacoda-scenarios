@@ -25,7 +25,7 @@ watch com.example.ognl.TestService test "{target, params, returnObj, #cost}" "pa
 
 # 查看函数抛出异常时的表达式结果
 
-`mvn compile exec:java`{{execute}}
+`mvn compile exec:java -DexceptionCase=true`{{execute}}
 
 代码里的表达式：
 
